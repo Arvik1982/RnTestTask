@@ -1,4 +1,7 @@
+import ChevronIcon from '@/assets/svg/CommonIcons/ChevronIcon';
 import AvatarIcon from '@/assets/svg/TopIcons/AvatarIcon';
+import QrIcon from '@/assets/svg/TopIcons/QrIcon';
+import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { StyleSheet } from 'react-native';
 
@@ -10,10 +13,19 @@ export default function HomeScreen() {
           <ThemedView style={styles.boxLeftAvatar}>
             <AvatarIcon />
           </ThemedView>
-          <ThemedView style={styles.boxLeftTitle}></ThemedView>
-          <ThemedView style={styles.boxLeftChevron}></ThemedView>
+
+          <ThemedView style={styles.boxLeftTitle}>
+            <ThemedText type="default">'AAAaaaaa bbb'</ThemedText>
+          </ThemedView>
+
+          <ThemedView style={styles.boxLeftChevron}>
+            <ChevronIcon />
+          </ThemedView>
         </ThemedView>
-        <ThemedView style={styles.topBoxRight}></ThemedView>
+
+        <ThemedView style={styles.topBoxRight}>
+          <QrIcon />
+        </ThemedView>
       </ThemedView>
       <ThemedView style={styles.nav}></ThemedView>
       <ThemedView style={styles.details}>
@@ -42,32 +54,52 @@ const styles = StyleSheet.create({
     width: 375,
     height: 40,
     flexDirection: 'row',
+
     justifyContent: 'space-between',
+    alignItems: 'center',
     paddingRight: 16,
     paddingLeft: 16,
-    opacity: 1,
   },
   topBoxLeft: {
-    width: 132,
+    // width: 132,
     height: 36,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     gap: 12,
-    opacity: 1,
   },
   boxLeftAvatar: {
     width: 36,
     height: 36,
     gap: 10,
-    opacity: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
     borderRadius: 9999,
     backgroundColor: '#0F0F0F',
   },
-  boxLeftTitle: {},
-  boxLeftChevron: {},
+  boxLeftTitle: {
+    alignItems: 'center',
+    alignContent: 'center',
+    textAlign: 'center',
+  },
+  boxLeftTitleText: {
+    textAlign: 'center',
+    width: '100%',
+  },
+  boxLeftChevron: {
+    width: 6,
+    height: 10,
+  },
+
   topBoxRight: {
+    flexDirection: 'row',
+
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    alignContent: 'center',
     width: 40,
     height: 40,
-    gap: 8,
-    opacity: 1,
+    // gap: 8,
   },
   nav: {
     width: 375,
@@ -75,7 +107,6 @@ const styles = StyleSheet.create({
     paddingRight: 16,
     paddingLeft: 16,
     gap: 24,
-    opacity: 1,
   },
   details: {
     width: 375,
@@ -83,7 +114,6 @@ const styles = StyleSheet.create({
     paddingRight: 16,
     paddingLeft: 16,
     gap: 16,
-    opacity: 1,
   },
   detailsCardsContainer: {},
   detailsButtonContainer: {},
