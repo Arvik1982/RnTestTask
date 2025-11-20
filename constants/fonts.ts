@@ -16,38 +16,67 @@ type AllowedFontWeight =
 const fontConfig = {
   ios: {
     regular: {
-      fontFamily: 'system-ui',
-      fontWeight: '400' as AllowedFontWeight,
-    },
-    medium: { fontFamily: 'system-ui', fontWeight: '500' as AllowedFontWeight },
-    bold: { fontFamily: 'system-ui', fontWeight: '700' as AllowedFontWeight },
-    heavy: { fontFamily: 'system-ui', fontWeight: '900' as AllowedFontWeight },
-  },
-  default: {
-    regular: { fontFamily: 'normal', fontWeight: '400' as AllowedFontWeight },
-    medium: { fontFamily: 'normal', fontWeight: '500' as AllowedFontWeight },
-    bold: { fontFamily: 'normal', fontWeight: '700' as AllowedFontWeight },
-    heavy: { fontFamily: 'normal', fontWeight: '900' as AllowedFontWeight },
-  },
-  web: {
-    regular: {
-      fontFamily:
-        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      fontFamily: 'Inter-Regular',
       fontWeight: '400' as AllowedFontWeight,
     },
     medium: {
-      fontFamily:
-        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      fontFamily: 'Inter-Medium',
       fontWeight: '500' as AllowedFontWeight,
     },
+    semiBold: {
+      fontFamily: 'Inter-SemiBold',
+      fontWeight: '600' as AllowedFontWeight,
+    },
     bold: {
-      fontFamily:
-        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      fontFamily: 'Inter-Bold',
       fontWeight: '700' as AllowedFontWeight,
     },
     heavy: {
-      fontFamily:
-        "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
+      fontFamily: 'Inter-Black',
+      fontWeight: '900' as AllowedFontWeight,
+    },
+  },
+  android: {
+    regular: {
+      fontFamily: 'Inter-Regular',
+      fontWeight: '400' as AllowedFontWeight,
+    },
+    medium: {
+      fontFamily: 'Inter-Medium',
+      fontWeight: '500' as AllowedFontWeight,
+    },
+    semiBold: {
+      fontFamily: 'Inter-SemiBold',
+      fontWeight: '600' as AllowedFontWeight,
+    },
+    bold: {
+      fontFamily: 'Inter-Bold',
+      fontWeight: '700' as AllowedFontWeight,
+    },
+    heavy: {
+      fontFamily: 'Inter-Black',
+      fontWeight: '900' as AllowedFontWeight,
+    },
+  },
+  web: {
+    regular: {
+      fontFamily: 'Inter-Regular, system-ui, sans-serif',
+      fontWeight: '400' as AllowedFontWeight,
+    },
+    medium: {
+      fontFamily: 'Inter-Medium, system-ui, sans-serif',
+      fontWeight: '500' as AllowedFontWeight,
+    },
+    semiBold: {
+      fontFamily: 'Inter-SemiBold, system-ui, sans-serif',
+      fontWeight: '600' as AllowedFontWeight,
+    },
+    bold: {
+      fontFamily: 'Inter-Bold, system-ui, sans-serif',
+      fontWeight: '700' as AllowedFontWeight,
+    },
+    heavy: {
+      fontFamily: 'Inter-Black, system-ui, sans-serif',
       fontWeight: '900' as AllowedFontWeight,
     },
   },

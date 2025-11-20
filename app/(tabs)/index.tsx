@@ -1,13 +1,22 @@
 import ChevronIcon from '@/assets/svg/CommonIcons/ChevronIcon';
-import BonusIcon from '@/assets/svg/NavIcons/BonusIcon';
-import DeliveryIcon from '@/assets/svg/NavIcons/DeliveryIcon';
-import SupportIcon from '@/assets/svg/NavIcons/SupportIcon';
-import TravelIcon from '@/assets/svg/NavIcons/TravelIcon';
+import CrossIcon from '@/assets/svg/CommonIcons/CrossIcon';
 import AvatarIcon from '@/assets/svg/TopIcons/AvatarIcon';
 import QrIcon from '@/assets/svg/TopIcons/QrIcon';
+import CardDetailsList from '@/components/HomeScreen/CardsDetaisList';
+import ServicesNavMenu from '@/components/HomeScreen/ServicesNavMenu';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { StyleSheet } from 'react-native';
+import { StyleSheet, TouchableOpacity, View } from 'react-native';
+
+const WeekExpencesBar = (expences: Array<number>) => {
+  return (
+    <>
+      <View style={styles.heddingLineBox}>
+        <View></View>
+      </View>
+    </>
+  );
+};
 
 export default function HomeScreen() {
   return (
@@ -19,7 +28,7 @@ export default function HomeScreen() {
           </ThemedView>
 
           <ThemedView style={styles.boxLeftTitle}>
-            <ThemedText type="default">'AAAaaaaa bbb'</ThemedText>
+            <ThemedText type="default">'Name User'</ThemedText>
           </ThemedView>
 
           <ThemedView style={styles.boxLeftChevron}>
@@ -31,31 +40,33 @@ export default function HomeScreen() {
           <QrIcon />
         </ThemedView>
       </ThemedView>
-      <ThemedView style={styles.nav}>
-        <ThemedView style={styles.navItemContainer}>
-          <TravelIcon />
-          <ThemedText>Tggg</ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.navItemContainer}>
-          <DeliveryIcon />
-          <ThemedText>Tggg</ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.navItemContainer}>
-          <BonusIcon />
-          <ThemedText>Tggg</ThemedText>
-        </ThemedView>
-        <ThemedView style={styles.navItemContainer}>
-          <SupportIcon />
-          <ThemedText>Tggg</ThemedText>
-        </ThemedView>
-      </ThemedView>
+
+      <ServicesNavMenu />
 
       <ThemedView style={styles.details}>
-        <ThemedView style={styles.detailsCardsContainer}></ThemedView>
-        <ThemedView style={styles.detailsButtonContainer}></ThemedView>
+        <ThemedView style={styles.detailsCardsContainer}>
+          <CardDetailsList />
+        </ThemedView>
+
+        <TouchableOpacity
+          onPress={() => {}}
+          style={styles.detailsButtonContainer}
+        >
+          <CrossIcon />
+        </TouchableOpacity>
       </ThemedView>
+
       <ThemedView style={styles.expencesBox}>
-        <ThemedView style={styles.expencesBoxHeadding}></ThemedView>
+        <ThemedView style={styles.expencesBoxHeadding}>
+          <ThemedView style={styles.headdingTitleContainer}>
+            <ThemedText style={styles.titleContainerLeft}></ThemedText>
+            <ThemedText style={styles.titleContainerRight}></ThemedText>
+          </ThemedView>
+          {/* <View style={styles.heddingLineBox}>
+            <View></View>
+          </View> */}
+        </ThemedView>
+
         <ThemedView style={styles.expencesBoxSections}>
           <ThemedView style={styles.boxSectionsToday}></ThemedView>
           <ThemedView style={styles.boxSectionsYesterday}></ThemedView>
@@ -70,7 +81,7 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'column',
     alignItems: 'center',
-    gap: 8,
+    gap: 24,
   },
   topBox: {
     width: 375,
@@ -83,7 +94,6 @@ const styles = StyleSheet.create({
     paddingLeft: 16,
   },
   topBoxLeft: {
-    // width: 132,
     height: 36,
     flexDirection: 'row',
     alignItems: 'center',
@@ -121,37 +131,33 @@ const styles = StyleSheet.create({
     alignContent: 'center',
     width: 40,
     height: 40,
-    // gap: 8,
-  },
-  nav: {
-    justifyContent: 'space-between',
-    flexDirection: 'row',
-    alignItems: 'center',
-    width: 375,
-    height: 64,
-    paddingRight: 16,
-    paddingLeft: 16,
-    gap: 24,
-  },
-  navItemContainer: {
-    justifyContent: 'center',
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: 64,
-    height: 64,
-    gap: 8,
-    borderRadius: 16,
   },
 
   details: {
-    width: 375,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    width: '100%',
     height: 98,
     paddingRight: 16,
     paddingLeft: 16,
-    gap: 16,
+    gap: 10,
   },
-  detailsCardsContainer: {},
-  detailsButtonContainer: {},
+  detailsCardsContainer: {
+    height: '100%',
+    width: '85%',
+  },
+
+  detailsButtonContainer: {
+    backgroundColor: '#0F0F0F',
+    height: '100%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: '12%',
+    borderRadius: 16,
+    padding: 12,
+  },
+
   expencesBox: {
     width: 375,
     height: 377,
@@ -161,6 +167,7 @@ const styles = StyleSheet.create({
     opacity: 1,
   },
   expencesBoxHeadding: {},
+  heddingLineBox: {},
   expencesBoxSections: {},
   boxSectionsToday: {},
   boxSectionsYesterday: {},
