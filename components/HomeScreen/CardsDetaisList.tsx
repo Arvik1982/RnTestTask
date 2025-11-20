@@ -1,7 +1,7 @@
 import bgGold from '@/assets/images/cards/bgGold.png';
 import bgVirtual from '@/assets/images/cards/bgVirtual.png';
 import CardTypeIcon from '@/assets/svg/CardIcons/CardTypeIcon';
-import data from '@/constants/data.json';
+import data from '@/constants/mockData/data.json';
 import React from 'react';
 import { FlatList, Image, StyleSheet, View } from 'react-native';
 import { ThemedText } from '../ThemedText';

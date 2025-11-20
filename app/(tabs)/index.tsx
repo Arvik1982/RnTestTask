@@ -4,19 +4,10 @@ import AvatarIcon from '@/assets/svg/TopIcons/AvatarIcon';
 import QrIcon from '@/assets/svg/TopIcons/QrIcon';
 import CardDetailsList from '@/components/HomeScreen/CardsDetaisList';
 import ServicesNavMenu from '@/components/HomeScreen/ServicesNavMenu';
+import WeekExpencesBar from '@/components/HomeScreen/WeekExpencesBar';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
-import { StyleSheet, TouchableOpacity, View } from 'react-native';
-
-const WeekExpencesBar = (expences: Array<number>) => {
-  return (
-    <>
-      <View style={styles.heddingLineBox}>
-        <View></View>
-      </View>
-    </>
-  );
-};
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -58,13 +49,12 @@ export default function HomeScreen() {
 
       <ThemedView style={styles.expencesBox}>
         <ThemedView style={styles.expencesBoxHeadding}>
-          <ThemedView style={styles.headdingTitleContainer}>
+          {/* <ThemedView style={styles.headdingTitleContainer}>
             <ThemedText style={styles.titleContainerLeft}></ThemedText>
             <ThemedText style={styles.titleContainerRight}></ThemedText>
-          </ThemedView>
-          {/* <View style={styles.heddingLineBox}>
-            <View></View>
-          </View> */}
+          </ThemedView> */}
+
+          <WeekExpencesBar />
         </ThemedView>
 
         <ThemedView style={styles.expencesBoxSections}>
@@ -80,14 +70,11 @@ const styles = StyleSheet.create({
   contentContainer: {
     flex: 1,
     flexDirection: 'column',
-    alignItems: 'center',
     gap: 24,
   },
   topBox: {
-    width: 375,
     height: 40,
     flexDirection: 'row',
-
     justifyContent: 'space-between',
     alignItems: 'center',
     paddingRight: 16,
@@ -125,7 +112,6 @@ const styles = StyleSheet.create({
 
   topBoxRight: {
     flexDirection: 'row',
-
     justifyContent: 'flex-end',
     alignItems: 'center',
     alignContent: 'center',
@@ -159,7 +145,7 @@ const styles = StyleSheet.create({
   },
 
   expencesBox: {
-    width: 375,
+    width: '100%',
     height: 377,
     paddingRight: 16,
     paddingLeft: 16,
@@ -167,7 +153,7 @@ const styles = StyleSheet.create({
     opacity: 1,
   },
   expencesBoxHeadding: {},
-  heddingLineBox: {},
+
   expencesBoxSections: {},
   boxSectionsToday: {},
   boxSectionsYesterday: {},
