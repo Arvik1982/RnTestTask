@@ -12,14 +12,16 @@
     "date": "Jun 8, 19:21",
     "summ": 122.47,
     "type": "Food",
-    "name": "Starbucks"
+    "name": "Starbucks",
+    "img": "Sbks.jpg"
   },
   {
     "id": 3,
     "date": "Jun 8, 8:53",
     "summ": 13.17,
     "type": "Entertainment",
-    "name": "Netflix"
+    "name": "Netflix",
+    "img": "Nfx.jpg"
   },
   {
     "id": 4,
