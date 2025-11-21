@@ -3,7 +3,8 @@ import AvatarIcon from '@/shared/assets/svg/TopIcons/AvatarIcon';
 import QrIcon from '@/shared/assets/svg/TopIcons/QrIcon';
 import { ThemedText } from '@/shared/ui/ThemedText';
 import { ThemedView } from '@/shared/ui/ThemedView';
-import { StyleSheet } from 'react-native';
+import { router } from 'expo-router';
+import { StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HeaderBox() {
   return (
@@ -12,11 +13,15 @@ export default function HeaderBox() {
         <ThemedView style={styles.boxLeftAvatar}>
           <AvatarIcon />
         </ThemedView>
-
-        <ThemedView style={styles.boxLeftTitle}>
-          <ThemedText type="default">Charlotte</ThemedText>
-        </ThemedView>
-
+        <TouchableOpacity
+          onPress={() => router.push('/(tabs)/(stacks)/notifications')}
+        >
+          <ThemedView style={styles.boxLeftTitle}>
+            <ThemedText style={{ fontSize: 16 }} type="defaultMedium">
+              Charlotte
+            </ThemedText>
+          </ThemedView>
+        </TouchableOpacity>
         <ThemedView style={styles.boxLeftChevron}>
           <ChevronIcon />
         </ThemedView>

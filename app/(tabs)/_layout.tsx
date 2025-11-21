@@ -6,9 +6,9 @@ import HomeIcon from '@/shared/assets/svg/TabbarIcons/HomeIcon';
 import PaymentsIcon from '@/shared/assets/svg/TabbarIcons/PaymentsIcon';
 import { Colors } from '@/shared/config/colors';
 import { useColorScheme } from '@/shared/lib/hooks/useColorScheme';
+import React from 'react';
 
 import { Tabs } from 'expo-router';
-import React from 'react';
 
 export default function TabLayout() {
   const colorScheme = useColorScheme();
@@ -61,6 +61,14 @@ export default function TabLayout() {
         options={{
           title: 'Chats',
           tabBarIcon: ({ color }) => <ChatsIcon color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(stacks)"
+        options={{
+          title: '(stacks)',
+          href: null,
+          headerShown: false,
         }}
       />
     </Tabs>
