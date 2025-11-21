@@ -1,14 +1,14 @@
-import ChevronIcon from '@/assets/svg/CommonIcons/ChevronIcon';
-import CrossIcon from '@/assets/svg/CommonIcons/CrossIcon';
-import AvatarIcon from '@/assets/svg/TopIcons/AvatarIcon';
-import QrIcon from '@/assets/svg/TopIcons/QrIcon';
-import CardDetailsList from '@/components/HomeScreen/CardsDetaisList';
-import ServicesNavMenu from '@/components/HomeScreen/ServicesNavMenu';
-import TransactionList from '@/components/HomeScreen/TransactionsList';
-import WeekExpencesBar from '@/components/HomeScreen/WeekExpencesBar';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
-import transactions from '@/constants/mockData/transactions.json';
+import CardDetailsList from '@/features/home/CardsDetaisList';
+import ServicesNavMenu from '@/features/home/ServicesNavMenu';
+import TransactionList from '@/features/home/TransactionsList';
+import WeekExpencesBar from '@/features/home/WeekExpencesBar';
+import ChevronIcon from '@/shared/assets/svg/CommonIcons/ChevronIcon';
+import CrossIcon from '@/shared/assets/svg/CommonIcons/CrossIcon';
+import AvatarIcon from '@/shared/assets/svg/TopIcons/AvatarIcon';
+import QrIcon from '@/shared/assets/svg/TopIcons/QrIcon';
+import transactions from '@/shared/constants/mockData/transactions.json';
+import { ThemedText } from '@/shared/ui/ThemedText';
+import { ThemedView } from '@/shared/ui/ThemedView';
 import { StyleSheet, TouchableOpacity } from 'react-native';
 
 export default function HomeScreen() {

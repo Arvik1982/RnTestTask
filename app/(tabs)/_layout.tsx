@@ -1,11 +1,12 @@
-import AnalyticsIcon from '@/assets/svg/TabbarIcons/AnalyticsIcon';
-import ChatsIcon from '@/assets/svg/TabbarIcons/ChatsIcon';
-import HistoryIcon from '@/assets/svg/TabbarIcons/HistoryIcon';
-import HomeIcon from '@/assets/svg/TabbarIcons/HomeIcon';
-import PaymentsIcon from '@/assets/svg/TabbarIcons/PaymentsIcon';
-import { Haptic } from '@/components/Tapbar/Haptic';
-import { Colors } from '@/constants/colors';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { Haptic } from '@/features/tapbar/Haptic';
+import AnalyticsIcon from '@/shared/assets/svg/TabbarIcons/AnalyticsIcon';
+import ChatsIcon from '@/shared/assets/svg/TabbarIcons/ChatsIcon';
+import HistoryIcon from '@/shared/assets/svg/TabbarIcons/HistoryIcon';
+import HomeIcon from '@/shared/assets/svg/TabbarIcons/HomeIcon';
+import PaymentsIcon from '@/shared/assets/svg/TabbarIcons/PaymentsIcon';
+import { Colors } from '@/shared/config/colors';
+import { useColorScheme } from '@/shared/lib/hooks/useColorScheme';
+
 import { Tabs } from 'expo-router';
 import React from 'react';
 
@@ -31,9 +32,6 @@ export default function TabLayout() {
         name="index"
         options={{
           title: 'Home',
-          // tabBarIcon: ({ color }) => (
-          //   <IconSymbol size={28} name="house.fill" color={color} />
-          // ),
           tabBarIcon: ({ color }) => <HomeIcon color={color} />,
         }}
       />

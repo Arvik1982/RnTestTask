@@ -1,12 +1,13 @@
-import BillsonImg from '@/assets/images/Billson.jpg';
-import NetflixImg from '@/assets/images/Nfx.png';
-import StarbucksImg from '@/assets/images/Sbks.png';
-import { Colors } from '@/constants/colors';
+import BillsonImg from '@/shared/assets/images/Billson.jpg';
+import NetflixImg from '@/shared/assets/images/Nfx.png';
+import StarbucksImg from '@/shared/assets/images/Sbks.png';
+
+import { Colors } from '@/shared/config/colors';
 import { GroupedTransactions, Transaction } from '@/types/types';
 import React, { memo, useMemo } from 'react';
 import { Image, ScrollView, StyleSheet } from 'react-native';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedText } from '../../shared/ui/ThemedText';
+import { ThemedView } from '../../shared/ui/ThemedView';
 
 interface TransactionListProps {
   transactions: Transaction[];

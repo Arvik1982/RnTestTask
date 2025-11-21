@@ -1,5 +1,5 @@
-import { customDarkTheme, customDefaultTheme } from '@/constants/theme';
-import { useColorScheme } from '@/hooks/useColorScheme';
+import { customDarkTheme, customDefaultTheme } from '@/shared/config/theme';
+import { useColorScheme } from '@/shared/lib/hooks/useColorScheme';
 import {
   Inter_400Regular,
   Inter_500Medium,
@@ -10,7 +10,6 @@ import {
 } from '@expo-google-fonts/inter';
 import { ThemeProvider } from '@react-navigation/native';
 import { Stack } from 'expo-router';
-
 import 'react-native-reanimated';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import getLayoutStyles from './layoutStyles';

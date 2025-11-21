@@ -1,11 +1,11 @@
-import BonusIcon from '@/assets/svg/NavIcons/BonusIcon';
-import DeliveryIcon from '@/assets/svg/NavIcons/DeliveryIcon';
-import SupportIcon from '@/assets/svg/NavIcons/SupportIcon';
-import TravelIcon from '@/assets/svg/NavIcons/TravelIcon';
+import BonusIcon from '@/shared/assets/svg/NavIcons/BonusIcon';
+import DeliveryIcon from '@/shared/assets/svg/NavIcons/DeliveryIcon';
+import SupportIcon from '@/shared/assets/svg/NavIcons/SupportIcon';
+import TravelIcon from '@/shared/assets/svg/NavIcons/TravelIcon';
 import { memo } from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedText } from '../../shared/ui/ThemedText';
+import { ThemedView } from '../../shared/ui/ThemedView';
 
 enum menuEnum {
   TRAVEL = 'Travel',

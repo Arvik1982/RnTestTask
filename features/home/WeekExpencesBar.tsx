@@ -1,5 +1,5 @@
-import { Colors } from '@/constants/colors';
-import expences from '@/constants/mockData/expences.json';
+import { Colors } from '@/shared/config/colors';
+import expences from '@/shared/constants/mockData/expences.json';
 import { memo } from 'react';
 import { StyleSheet, View } from 'react-native';
 

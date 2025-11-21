@@ -1,11 +1,11 @@
-import bgGold from '@/assets/images/cards/bgGold.png';
-import bgVirtual from '@/assets/images/cards/bgVirtual.png';
-import CardTypeIcon from '@/assets/svg/CardIcons/CardTypeIcon';
-import data from '@/constants/mockData/data.json';
+import bgGold from '@/shared/assets/images/cards/bgGold.png';
+import bgVirtual from '@/shared/assets/images/cards/bgVirtual.png';
+import CardTypeIcon from '@/shared/assets/svg/CardIcons/CardTypeIcon';
+import data from '@/shared/constants/mockData/data.json';
 import React from 'react';
 import { FlatList, Image, StyleSheet, View } from 'react-native';
-import { ThemedText } from '../ThemedText';
-import { ThemedView } from '../ThemedView';
+import { ThemedText } from '../../shared/ui/ThemedText';
+import { ThemedView } from '../../shared/ui/ThemedView';
 
 type CardClassType = 'premium' | 'standart';
 type CardsType = 'debit' | 'virtual';
