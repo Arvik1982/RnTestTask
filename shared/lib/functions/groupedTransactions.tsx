@@ -53,15 +53,11 @@ export const groupTransactions = (
     }
 
     if (transactionDate.toDateString() === today.toDateString()) {
-      return dateDisplay
-        ? `Today ${','} ${day} ${month.slice(0, 3)} `
-        : 'Today';
+      return dateDisplay ? `Today ${','} ${day} ${month} ` : 'Today';
     }
 
     if (transactionDate.toDateString() === yesterday.toDateString()) {
-      return dateDisplay
-        ? `Yesterday${','} ${day} ${month.slice(0, 3)}`
-        : 'Yesterday';
+      return dateDisplay ? `Yesterday${','} ${day} ${month}` : 'Yesterday';
     }
 
     return `${day} ${month} ${year}`;
