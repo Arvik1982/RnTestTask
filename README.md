@@ -1,26 +1,24 @@
-# React Native Expo app
+# 📱 TwoScreens — React Native Navigation Demo
 
-## Стек приложения
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Expo](https://img.shields.io/badge/Expo-51+-46BC2F?style=flat&logo=expo&logoColor=white)](https://expo.dev)
+[![ReactNative](https://img.shields.io/badge/React_Native-0.75-20232A?style=flat&logo=react&logoColor=%2361DAFB)](https://reactnative.dev)
+[![Navigation](https://img.shields.io/badge/React_Navigation-6-007AFF?style=flat&logo=react-navigation&logoColor=white)](https://reactnavigation.org)
 
-React, TypeScrypt, Js,React Native
+## 🎯 **Задача (по ТЗ)**
+Сверстать **2 экрана** согласно Figma макету:
+- **HomeScreen** — стартовый экран + TabBar (левая иконка)
+- **NotificationsScreen** — по клику на имя пользователя
 
-## ТЗ
+## ✅ **Статус: Полностью готово**
+✅ HomeScreen — основной экран
+✅ NotificationsScreen — уведомления (переход через тап по фамилии на HomeScreen )
+✅ Bottom Tab Navigation
+✅ User Profile click → Notifications
+✅ Expo Go ready (npx expo start)
 
-Сверстать 2 экрана согласно макету фигма
-
-- первый экран открывается при старте приложения и при переходе на экран home по нажатию на первую слева иконку меню таб бара снизу экрана
-- второй экран - экран уведомлений, открывается при нажатии на имя пользователя нвверху первого экрана
-
-## Запуск приложения
-
-1. Install dependencies
-
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
+## 🚀 **Запуск за 60 секунд**
+git clone https://github.com/Arvik1982/TwoScreens.git
+cd TwoScreens
+npm install
+npx expo start
