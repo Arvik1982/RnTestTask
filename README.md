@@ -5,8 +5,7 @@
 [![ReactNative](https://img.shields.io/badge/React_Native-0.75-20232A?style=flat&logo=react&logoColor=%2361DAFB)](https://reactnative.dev)
 [![Navigation](https://img.shields.io/badge/React_Navigation-6-007AFF?style=flat&logo=react-navigation&logoColor=white)](https://reactnavigation.org)
 
-## 🎯 **Задача (по ТЗ)**
-Сверстать **2 экрана** согласно Figma макету:
+## 🎯 **2 экрана**
 - **HomeScreen** — стартовый экран + TabBar (левая иконка)
 - **NotificationsScreen** — по клику на имя пользователя
 
@@ -17,7 +16,7 @@
 ✅ User Profile click → Notifications
 ✅ Expo Go ready (npx expo start)
 
-## 🚀 **Запуск за 60 секунд**
+## 🚀 **Запуск**
 git clone https://github.com/Arvik1982/TwoScreens.git
 cd TwoScreens
 npm install
